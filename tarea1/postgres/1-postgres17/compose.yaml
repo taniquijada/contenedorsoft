@@ -1,16 +1,15 @@
+version: '3.8'
 
 services:
-  db:
+  postgres:
     image: postgres:17
-    container_name: apsw_db17
+    container_name: postgres173CV231AGO2026
     environment:
-      POSTGRES_DB: proyecto
-      POSTGRES_USER: proyecto
-      POSTGRES_PASSWORD: practica_local_26o
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
-      - "127.0.0.1:5434:5432"
+      - "5432:5432"
     volumes:
-      - datos_db17:/var/lib/postgresql/data
-
-volumes:
-  datos_db17:
+      - ./data:/var/lib/postgresql/data
+    restart: unless-stopped
