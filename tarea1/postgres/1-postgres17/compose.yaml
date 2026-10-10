@@ -1,0 +1,16 @@
+
+services:
+  db:
+    image: postgres:17
+    container_name: apsw_db17
+    environment:
+      POSTGRES_DB: proyecto
+      POSTGRES_USER: proyecto
+      POSTGRES_PASSWORD: practica_local_26o
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - datos_db17:/var/lib/postgresql/data
+
+volumes:
+  datos_db17:
