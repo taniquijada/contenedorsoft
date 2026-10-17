@@ -1,0 +1,17 @@
+
+{
+  "servers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\LENOVO\\Documents\\GitHub\\contenedorsoft\\tarea2\\mcp-practica"
+      ]
+    }
+  }
+}
+hola 
